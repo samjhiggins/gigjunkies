@@ -1,0 +1,39 @@
+    body.dark-theme {
+    background: #000;
+    color: #fff;
+    nav.main-menu {
+        border-top: 1px solid #fff;
+        border-bottom: 1px solid #fff;
+        ul li a {
+            color: #fff;
+        }
+    }
+
+		/* 
+			search box
+		*/
+	    .site-search-box {
+	        margin: 20px 0;
+	        text-align: right;
+	        input[type="text"] {
+	            border: none;
+	            border-bottom: 1px solid $pink;
+	            color: #fff;
+	            font-family: 'Roboto Condensed';
+	            font-weight: 700;
+	            background: #000;
+	        }
+	        input:focus {
+	            outline: none;
+	        }
+	        & ::-webkit-input-placeholder, & ::-moz-placeholder, & :-ms-input-placeholder, & :-moz-placeholder {
+	            /* Chrome/Opera/Safari */
+	            color: #fff;
+	            font-family: 'Roboto Condensed';
+	            font-weight: 700;
+	        }
+	    }
+    }
+
+
+    

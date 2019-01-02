@@ -1,0 +1,39 @@
+.site-footer {
+        background: #ec008c;
+        color: #fff;
+        padding-top: 30px;
+    }
+    
+    @media(max-width: 425px) {
+        .site-footer {
+            text-align: center;
+        }
+        .site-footer .social-icons {
+            text-align: center;
+        }
+    }
+    .footer-logo {
+        margin: 20px 0;
+        text-align: center;
+    }
+    .footer-logo img {
+        margin: 10px auto;
+        width: 100px;
+    }
+    .site-footer h4 {
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+    }
+    .site-footer .menu {
+        margin-bottom: 30px;
+    }
+    .site-footer .menu li a {
+        color: #fff;
+    }
+    .small-print, .small-print p {
+        font-size: 11px;
+        font-weight: 700;
+        line-height: 12px;
+    }
+    
