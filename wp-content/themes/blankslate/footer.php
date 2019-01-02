@@ -87,6 +87,16 @@
 			}
 
 
+			var $mobile_nav = { 
+				menu_button : $('.mobile-menu i'),
+				mobile_navigation : $('.mobile-navigation-links-container')
+			}
+
+			$mobile_nav.menu_button.click(function(){ 
+				$mobile_nav.mobile_navigation.toggle();
+			})
+
+
 
 		
 

@@ -87,6 +87,22 @@ a:active {
 
 .mobile-nav img { height: 28px;  }
 
+/* mobile navigation */
+.mobile-nav .mobile-navigation-links-container {display: none;}
+.mobile-navigation-links-container:before { 
+	clear: both;
+}
+.mobile-navigation-links-container ul li { 
+	display: block;
+	padding: 10px 0;
+	border-bottom: 1px solid #ececec;
+	font-weight: bold;
+}
+.mobile-navigation-links-container ul li  a{ 
+	color: #333;
+}
+
+
 header .site-logo { 
 	padding: 13px;
     width: 80% !important;
