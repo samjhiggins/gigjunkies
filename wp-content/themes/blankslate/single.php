@@ -4,6 +4,8 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="container">
 		<div class="row">
+
+
 			<div class="col-sm-12">
 
 				<?php get_template_part( 'entry' ); ?>
@@ -11,6 +13,8 @@
 				<h3>gallery</h3>
 				<div class="post-page-image-gallery">
 				<div class="grid">
+
+
 
 					<?php 
 	
