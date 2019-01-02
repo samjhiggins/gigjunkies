@@ -35,12 +35,7 @@
 		<div class="col-xs-offset-3 col-xs-6">
 			
 			
-
-
-			
-
 			<div class="footer-logo small-print">
-			<!--<img src="/wp-content/themes/blankslate/Gig_Junkies_Logo_2_@2x.png" class="img-responsive site-logo"/>	-->
 			<img src="/wp-content/themes/blankslate/Gig_Junkies_Logo_1_@2x.png" class="img-responsive site-logo"/>
 			<p>Copyright &copy; Gig Junkies 2009 - 2017. All Rights Reserved</p>
 			</div>
@@ -54,19 +49,48 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 	<script>
 		$(document).ready(function(){ 
-			// todo: tidy this up
 
-			$mobileSearchButton = $('.mobile-search .fa-search');
-			$siteSearchBox = $('.site-search-box');
+			var $mobile_nav = { 
+				menu_button : $('.mobile-menu i'),
+				mobile_navigation : $('.mobile-navigation-links-container'),
+				search_button : $('.mobile-search i'),
+				search_box : $('.site-search-box'),
+				search_box_input : $('.site-search-box').find('input'),
+				search_open : false
+			}
 
-			$mobileSearchButton.click(function(){ 
-				$(this).removeClass('fa-search');
-				$(this).addClass('fa-close');
-				$siteSearchBox.removeClass('hidden-xs');
-				$siteSearchBox.find('input').focus();
+
+			/* open site search and focus input */
+			$mobile_nav.search_button.click(function(){ 
+
+				if(!$mobile_nav.search_open){
+					$(this).removeClass('fa-search');
+					$(this).addClass('fa-times');
+					$mobile_nav.search_box.removeClass('hidden-xs');
+					$mobile_nav.search_box_input.focus();
+
+					$mobile_nav.search_open = true;
+				}
+				else { 
+					$(this).removeClass('fa-times');
+					$(this).addClass('fa-search');
+					$mobile_nav.search_box.addClass('hidden-xs');
+					$mobile_nav.search_open = false;
+				}
+
+				
 			});
 
+			/* open /close main navigation on mobile */
+			$mobile_nav.menu_button.click(function(){ 
+				$mobile_nav.mobile_navigation.toggle();
+			})
 
+			
+
+
+
+			/* initiate themes */
 			$('#dark-theme').click(function(){ 
 				$('body').addClass('dark-theme');
 				$('.site-logo').attr('src','/wp-content/themes/blankslate/Gig_Junkies_Logo_2_@2x.png');
@@ -78,7 +102,7 @@
 			});
 
 
-
+			/* hot fix */
 			if($('.main-menu').find('li.current-menu-item.menu-item-has-children').length){ 
 				$('section#content').css('padding-top', '30px');
 			}
@@ -87,15 +111,8 @@
 			}
 
 
-			var $mobile_nav = { 
-				menu_button : $('.mobile-menu i'),
-				mobile_navigation : $('.mobile-navigation-links-container')
-			}
 
-			$mobile_nav.menu_button.click(function(){ 
-				$mobile_nav.mobile_navigation.toggle();
-			})
-
+		
 
 
 		

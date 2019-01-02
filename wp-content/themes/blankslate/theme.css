@@ -11,14 +11,6 @@ body.dark-theme nav.main-menu ul li a {
 }
 
 
-
-
-
-
-
-
-
-
 /* 
 	search box
 */
@@ -197,6 +189,7 @@ nav.main-menu .sub-menu li {
 .social-icons { text-align: left; color: #fff; margin: 20px 0; }
 .social-icons i,
 i.fa-search,
+i.fa-times,
 i.fa-bars,
 i.fa-close,
 i.fa-moon-o,
@@ -262,7 +255,7 @@ i.fa-sun-o {
 	margin: 20px 0;
 	text-align: center;
 }
-.footer-logo img {
+.footer-logo img.site-logo {
 	margin: 10px auto;
 	width: 100px;
 }
@@ -420,3 +413,6 @@ text-align: center; }
 		width: calc(100% / 3 - 2rem);
 	}
 }  
+
+
+#comments { display: none; }

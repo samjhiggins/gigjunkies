@@ -4,19 +4,22 @@
 <?php if ( have_posts() ) : while ( have_posts() ) : the_post(); ?>
 	<div class="container">
 		<div class="row">
-
-
 			<div class="col-sm-12">
-
 				<?php get_template_part( 'entry' ); ?>
 				
+				<?php 
+
+				// does the post have a gallery
+				$galleryCustomField = get_post_meta( get_the_ID(), 'gallery', true );
+				
+					if(!empty($galleryCustomField)) {
+				?>
+
 				<h3>gallery</h3>
 				<div class="post-page-image-gallery">
 				<div class="grid">
 
-
-
-					<?php 
+					<?php
 	
 						//
 						/*
@@ -37,10 +40,8 @@
 							}
 						*/
 
-						$galleryCustomField = get_post_meta( get_the_ID(), 'gallery', true );
-
 						// Check if the custom field has a value.
-						if ( ! empty( $galleryCustomField ) ) {
+						
 							$data = json_decode($galleryCustomField,true);
 
 							
@@ -52,30 +53,28 @@
 								print "<div class='gallery-image'><p class='caption'>{$caption}</p><img src={$src}/></div>";
 
 							}
-						}
 				
 					?>
 					</div>
 				</div>
-
-					<div class="post-footnote">
-						<h3>Footnote</h3>
-						
+						<?php }?>	
 						<?php 
-							$key_1_value = get_post_meta( get_the_ID(), 'footnote', true );
+							$footnote = get_post_meta( get_the_ID(), 'footnote', true );
 							// Check if the custom field has a value.
-							if ( ! empty( $key_1_value ) ) {
-							echo '<p>'.$key_1_value.'</p>';
+							if ( ! empty( $footnote ) ) {
+							echo '<div class="post-footnote">';
+							echo '<h3>Footnote</h3>';
+							echo '<p>'.$footnote.'</p>';
+							echo '</div>';
 							}
 						?>
-					</div>
+					
+
+
 				
 				<?php the_tags( '<h3>Tags</h3>', ', ', '<br />' ); ?> 
 
 				<?php if ( ! post_password_required() ) comments_template( '', true ); ?>
-
-
-
 
 			<?php endwhile; endif; ?>
 
