@@ -104,10 +104,10 @@
 
 			/* hot fix */
 			if($('.main-menu').find('li.current-menu-item.menu-item-has-children').length){ 
-				$('section#content').css('padding-top', '30px');
+				$('section#content').css('padding-top', '50px');
 			}
 			else if ($('.main-menu').find('li.current-menu-ancestor.menu-item-has-children').length){ 
-				$('section#content').css('padding-top', '30px');	
+				$('section#content').css('padding-top', '50px');	
 			}
 
 

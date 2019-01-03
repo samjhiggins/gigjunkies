@@ -47,14 +47,14 @@ body.dark-theme .site-search-box :-moz-placeholder { /* Firefox 18- */
 }
 
 
-
-
-
-
+/* main styles */
 html, body { 
 	font-family: 'Roboto', sans-serif;
 	color: #000;
 }
+
+
+/*typography*/
 
 a,
 a:hover,
@@ -63,14 +63,20 @@ a:active {
 	color:rgb(236, 0, 140);
 	text-decoration: none;
 }
-/* font formatting */
+h1,h2,h3,h4 { 
+	margin-top: 0;
+	margin-bottom: 0;
+}
 .h4, h4 { 
 	font-size: 15px;
 }
 
+h1.entry-title { margin: 10px 0;}
+
 
 /* mobile nav */
-.mobile-nav { padding: 10px 0; 
+.mobile-nav { 
+	padding: 10px 0; 
 	border-bottom: 1px solid #ddd;
 }
 
@@ -79,7 +85,17 @@ a:active {
 
 .mobile-nav img { height: 28px;  }
 
-/* mobile navigation */
+.mobile-nav .mobile-navigation-links-container ul.sub-menu { display: none; }
+.mobile-nav .mobile-navigation-links-container .current-menu-item a {color: #ec008c; }
+.mobile-nav .mobile-navigation-links-container .current-menu-item ul.sub-menu a {color: #000; }
+.mobile-nav .mobile-navigation-links-container .current-menu-item.menu-item-has-children ul.sub-menu { display: block !important; }
+
+.mobile-nav .mobile-navigation-links-container ul.menu { 
+	margin-bottom: 0;
+}
+.mobile-nav .mobile-navigation-links-container ul.menu li:last-child { 
+	border: none;
+}
 .mobile-nav .mobile-navigation-links-container {display: none;}
 .mobile-navigation-links-container:before { 
 	clear: both;
@@ -117,68 +133,69 @@ header .site-logo {
 
 
 
-nav.main-menu { 
+/* main navigation  */
+
+.main-menu .menu-main-menu-container { 
 	border-top: 1px solid #000;
 	border-bottom: 1px solid #000;
 	padding: 5px 0;
-	text-align: center
+	font-family: "Roboto Condensed"
 }
-nav.main-menu ul { 
-	margin-bottom: 0;
-	font-family: 'Roboto Condensed';
-	font-weight: 700;
-	text-transform : uppercase;
-	font-size: 18px;
+.main-menu ul { 
+	margin: 0;
+	padding: 0;
+	list-style: none;
+	text-align: center;
 	position: relative;
 }
-nav.main-menu ul li { 
+
+.main-menu ul li { 
 	display: inline-block;
-	margin: 0 15px;
+	margin: 0 15px ;
+	font-weight: bold;
+	font-size: 18px;
+	text-transform: uppercase;
+	
 }
-nav.main-menu ul li a { 
-	color: #000; 
-}
-nav.main-menu ul.sub-menu { 
-	display: none;
-}
-nav.main-menu .current-menu-ancestor > .sub-menu,
-nav.main-menu .current-menu-item > .sub-menu { 
-    display: block;
-    position: absolute;
-    left: 10%;
-    width: 80%;
-    top: 35px;
-    padding-bottom: 2px;
- 
-}
-nav.main-menu ul li:hover a { 
-	text-decoration: none; 
-	color: #ec008c;
-}
-nav.main-menu ul li.current-menu-item a { 
-	color: #ec008c;
-}
-
-
-nav.main-menu ul li.current-menu-item > .sub-menu li a { 
+.main-menu ul li a {
 	color: #000;
 }
-nav.main-menu ul li.current-menu-item > .sub-menu li:hover a { 
+.main-menu ul li.current-menu-item a { color:#ec008c}
+.main-menu ul li.current-menu-item > ul.sub-menu li a { color: #000 }
+.main-menu ul li.current-menu-item > ul.sub-menu li a:hover { color: #ec008c }
+.main-menu ul li a:hover { 
 	color: #ec008c;
 }
 
-nav.main-menu ul li:focus a,
-nav.main-menu ul li:active a { 
-	text-decoration: none;
+.main-menu ul li ul.sub-menu { 
+	position: absolute;
+	display: none;
+	left: 0;
+	width: 100%;
+	top: 41px;
 }
-nav.main-menu .sub-menu li { 
-	font-size: 16px;
+
+/* 
+	show the submenu when: 
+	- user is in category with subcategories
+	- user is in sub category with parent category
+*/
+
+.main-menu ul li.current-menu-ancestor > ul.sub-menu,
+.main-menu ul li.current-menu-item.menu-item-has-children > ul.sub-menu { 
+	display: block;
 }
+
+
+
+
+/*footer*/
 
 .site-footer {
     background: #ec008c;
     color: #fff;
-    padding-top: 30px;
+	padding-top: 30px;
+	margin-top: 20px;
 }
 
 

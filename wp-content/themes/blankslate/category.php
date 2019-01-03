@@ -3,9 +3,11 @@
 
 <header class="header">
 
-<h1><?php _e( 'Category Archives: ', 'gigjunkies' ); ?>
+<div class="container">
+<h1><?php _e( 'Category: ', 'gigjunkies' ); ?>
 <?php single_cat_title(); ?>
 	</h1>
+</div>
 
 
 <?php if ( '' != category_description() ) echo apply_filters( 'archive_meta', '<div class="archive-meta">' . category_description() . '</div>' ); ?>
