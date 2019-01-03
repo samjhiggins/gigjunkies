@@ -83,10 +83,17 @@
 
 			/* open /close main navigation on mobile */
 			$mobile_nav.menu_button.click(function(){ 
-				$mobile_nav.mobile_navigation.toggle();
+				$('.mobile-nav').toggleClass('open');
+				$mobile_nav.mobile_navigation.slideToggle(150);
 			})
 
 			
+
+			$('.mobile-nav .menu-item-has-children > a').click(function(e){
+				e.preventDefault();
+				$(this).siblings('.sub-menu').slideToggle(150);
+				$(this).parent().toggleClass('expanded');
+			});
 
 
 

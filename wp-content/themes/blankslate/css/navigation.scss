@@ -1,40 +1,106 @@
 
 /* mobile nav */
+
+.mobile-navigation {
+	padding-left: 0;
+	padding-right: 0;
+}
 .mobile-nav { 
 	padding: 10px 0; 
 	border-bottom: 1px solid #ddd;
-}
 
-.mobile-nav .mobile-logo { text-align: center; }
-.mobile-nav .mobile-search { text-align: right; }
+	&.open { 
+		border-bottom: none;
+	}
+	
 
-.mobile-nav img { height: 28px;  }
+	.mobile-search,
+	.mobile-logo { 
+		text-align: center;
+	}
 
-.mobile-nav .mobile-navigation-links-container ul.sub-menu { display: none; }
-.mobile-nav .mobile-navigation-links-container .current-menu-item a {color: #ec008c; }
-.mobile-nav .mobile-navigation-links-container .current-menu-item ul.sub-menu a {color: #000; }
-.mobile-nav .mobile-navigation-links-container .current-menu-item.menu-item-has-children ul.sub-menu { display: block !important; }
+	img { 
+		height: 28px
+	}
 
-.mobile-nav .mobile-navigation-links-container ul.menu { 
-	margin-bottom: 0;
-}
-.mobile-nav .mobile-navigation-links-container ul.menu li:last-child { 
-	border: none;
-}
-.mobile-nav .mobile-navigation-links-container {display: none;}
-.mobile-navigation-links-container:before { 
-	clear: both;
-}
-.mobile-navigation-links-container ul li { 
-	display: block;
-	padding: 10px 0;
-	border-bottom: 1px solid #ececec;
-	font-weight: bold;
-}
-.mobile-navigation-links-container ul li  a{ 
-	color: #333;
-}
+	.mobile-navigation-links-container { 
+		
+		display: none;
+		border-bottom: 1px solid #ddd;
 
+		&:before{ 
+			clear: both;
+		}
+
+		ul li { 
+			display: block;
+			padding: 10px 0;
+			border-bottom: 1px solid #ececec;
+			font-weight: bold;
+			text-transform: uppercase;
+
+			a { 
+				color: #333;
+				position: relative;
+				display: block;
+				padding-left: 15px;
+
+
+				&:after{ 
+					font-family: "Font Awesome 5 Free";
+					content :"\f054";
+					position: absolute;
+					right: 10px;
+				}
+			}
+
+			
+
+			&.menu-item-has-children {
+				
+				&.expanded{
+					padding-bottom: 0px;
+					& > a:after { 
+						content :"\f068";		
+					}
+				}
+				
+
+				&> a:after{ 
+				font-family: "Font Awesome 5 Free";
+				content :"\f067";
+				position: absolute;
+				right: 10px;
+			}
+			}
+
+			
+		}
+
+		ul.sub-menu { 
+			display: none;
+		}
+		.current-menu-item{ 
+			ul.sub-menu a { 
+				color: #000;
+			}
+			a { 
+				color: #ec008c;
+			}
+		&.menu-item-has-children {
+				ul.sub-menu { display : block !important; }
+			}
+		}
+
+		ul.menu { 
+			margin-bottom: 0;
+			li:last-child { 
+				border: none;
+			}
+		}
+
+	}
+}
 
 
 /* main navigation  */

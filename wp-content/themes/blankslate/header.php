@@ -48,10 +48,10 @@
 
 								</div>
 
-								<div class="col-xs-12">
+								<div class="col-xs-12 mobile-navigation">
 									<div class="mobile-navigation-links-container">
 										<?php 
-										wp_nav_menu( array( 'theme_location' => 'main-menu' ) );	
+											wp_nav_menu( array( 'theme_location' => 'main-menu' ) );	
 										?>
 									</div>
 								</div>
@@ -148,8 +148,4 @@
 			echo "<link rel='stylesheet' href='{$themeroot}/css/main.css' crossorigin='anonymous'>";
 
 			?>
-
-			
-		
-
 		</header>
