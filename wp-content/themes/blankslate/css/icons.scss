@@ -1,21 +1,24 @@
-    /* 
+
+/* 
 	social icons 
 */
-.social-icons {
-    text-align: left;
+.social-icons { text-align: left; color: #fff; margin: 20px 0; }
+.social-icons i,
+i.fa-search,
+i.fa-times,
+i.fa-bars,
+i.fa-close,
+i.fa-moon-o,
+i.fa-sun-o { 
+    background: #ec008c;
+    line-height: 26px;
+    border-radius: 100%;
+    height: 26px;
+    width: 26px;
+    text-align: center;
+    margin: 0px 2px;
+    font-size: 13px;
     color: #fff;
-    margin: 20px 0;
-
-    i { 
-        background: $pink;
-        line-height: 26px;
-        border-radius: 100%;
-        height: 26px;
-        width: 26px;
-        text-align: center;
-        margin: 0px 2px;
-        font-size: 13px;
-        color: #fff;
-        cursor: pointer;
-    }
+    cursor: pointer;
 }
+

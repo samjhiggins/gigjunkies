@@ -145,7 +145,7 @@
 
 			echo "<link rel='stylesheet' href='{$themeroot}/bootstrap.css' crossorigin='anonymous>";
 			echo "<link rel='stylesheet' href='{$themeroot}/fontawesome.css' crossorigin='anonymous'>";
-			echo "<link rel='stylesheet' href='{$themeroot}/theme.css' crossorigin='anonymous'>";
+			echo "<link rel='stylesheet' href='{$themeroot}/css/main.css' crossorigin='anonymous'>";
 
 			?>
 
