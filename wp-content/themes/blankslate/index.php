@@ -20,7 +20,7 @@
 	<div class="row">
 		<div class="featured-posts entry-grid-list">
 
-		<?php $catquery = new WP_Query( 'cat=10&posts_per_page=4' ); ?>
+		<?php $catquery = new WP_Query( 'cat=241&posts_per_page=4' ); ?>
 			<ul>
 			<?php 
 				while($catquery->have_posts()) : $catquery->the_post(); 
