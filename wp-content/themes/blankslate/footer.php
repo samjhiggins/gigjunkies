@@ -13,17 +13,17 @@
 			<div class="col-sm-3">
 				<h4>Come + Say 'Hi!'</h4>
 				<div class="social-icons">
-				<i class="fa fa-facebook"></i>
-			<i class="fa fa-twitter"></i>
-			<i class="fa fa-instagram"></i>
-			<i class="fa fa-youtube-play"></i>
-			<i class="fa fa-google"></i>
+				<i class="fab fa-facebook"></i>
+			<i class="fab fa-twitter"></i>
+			<i class="fab fa-instagram"></i>
+			<i class="fab fa-youtube"></i>
+			<i class="fab fa-google"></i>
 			</div>
 			</div>
 			<div class="col-sm-3">
 				<h4>Light or dark theme</h4>
-				<i class="fa fa-sun-o" aria-hidden="true" id="light-theme"></i>
-				<i class="fa fa-moon-o" aria-hidden="true" id="dark-theme"></i>
+				<i class="fas fa-sun" aria-hidden="true" id="light-theme"></i>
+				<i class="fas fa-moon" aria-hidden="true" id="dark-theme"></i>
 			
 			</div>
 		</div>
@@ -110,12 +110,6 @@
 				$('section#content').css('padding-top', '30px');	
 			}
 
-
-
-		
-
-
-		
 
 		});
 	</script>

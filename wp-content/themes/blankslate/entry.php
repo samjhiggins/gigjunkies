@@ -10,9 +10,9 @@
 
 			echo '<p class="entry-date">'.get_the_time(get_option('date_format')).'</p>';
 			echo '<div class="social-icons">';
-				echo '<i class="fa fa-facebook"></i>';
-				echo '<i class="fa fa-twitter"></i>';
-				echo '<i class="fa fa-instagram"></i>';
+				echo '<i class="fab fa-facebook-f"></i>';
+				echo '<i class="fab fa-twitter"></i>';
+				echo '<i class="fab fa-instagram"></i>';
 			echo '</div>';
 		}
 		else { 
