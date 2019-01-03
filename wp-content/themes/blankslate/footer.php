@@ -88,7 +88,7 @@
 			})
 
 			
-
+			//flyout menu
 			$('.mobile-nav .menu-item-has-children > a').click(function(e){
 				e.preventDefault();
 				$(this).siblings('.sub-menu').slideToggle(150);
@@ -109,13 +109,18 @@
 			});
 
 
-			/* hot fix */
-			if($('.main-menu').find('li.current-menu-item.menu-item-has-children').length){ 
-				$('section#content').css('padding-top', '50px');
+			
+			//if we're on desktop
+			if($('.main-menu').is(':visible')){ 
+				if($('.main-menu').find('li.current-menu-item.menu-item-has-children').length){ 
+					$('section#content').css('padding-top', '50px');
+				}
+				else if ($('.main-menu').find('li.current-menu-ancestor.menu-item-has-children').length){ 
+					$('section#content').css('padding-top', '50px');	
+				}
 			}
-			else if ($('.main-menu').find('li.current-menu-ancestor.menu-item-has-children').length){ 
-				$('section#content').css('padding-top', '50px');	
-			}
+
+			
 
 
 		});

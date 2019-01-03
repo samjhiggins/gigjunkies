@@ -14,9 +14,13 @@
 	}
 	
 
-	.mobile-search,
+	
 	.mobile-logo { 
 		text-align: center;
+	}
+
+	.mobile-search { 
+		text-align: right;
 	}
 
 	img { 
@@ -35,7 +39,7 @@
 		ul li { 
 			display: block;
 			padding: 10px 0;
-			border-bottom: 1px solid #ececec;
+			border-bottom: 1px solid #ddd;
 			font-weight: bold;
 			text-transform: uppercase;
 
@@ -79,6 +83,12 @@
 
 		ul.sub-menu { 
 			display: none;
+
+			li:first-child { 
+				border-top: 1px solid #ddd;
+				margin-top: 10px;
+			}
+
 		}
 		.current-menu-item{ 
 			ul.sub-menu a { 
