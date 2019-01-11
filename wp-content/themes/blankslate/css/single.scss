@@ -1,0 +1,41 @@
+/* single post */
+.single-format-standard .entry-title {
+    text-align: center;
+    font-family: 'Roboto Condensed';
+    color: #000;
+    font-size: 22px;
+    text-transform: uppercase;
+    font-weight: 700;
+}
+
+.single-format-standard .entry-date,
+.single-format-standard p.entry-date { 
+	position: static;
+	display: block;
+	text-align: center;
+	font-weight: 700;
+}
+
+.single-format-standard .social-icons { 
+text-align: center; }
+
+.single-format-standard img { 
+	width: auto;
+	margin: 0 auto;
+	display: block;
+}
+.single-format-standard h3 {
+		font-size: 16px;
+	text-align: center;
+	padding-bottom: 10px;
+	text-transform: uppercase;
+	font-family: 'Roboto Condensed';
+	font-weight: 700;
+	border-bottom:1px solid rgba(0,0,0,0.1);
+
+}
+
+.single-format-standard .post-footnote p { 
+	margin-bottom: 0;
+}
+#comments { display: none; }

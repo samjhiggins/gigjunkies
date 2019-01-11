@@ -1,0 +1,30 @@
+.post-page-image-gallery { 
+	margin: 0 auto;
+	max-width: 1200px;
+	padding: 0 1rem;
+}
+.post-page-image-gallery .gallery-image { margin: 1rem;}
+.post-page-image-gallery .gallery-image img { 
+	max-width: 100%;
+	display: block;
+}
+.post-page-image-gallery .caption { 
+	display: none;
+}
+
+
+@media screen and (min-width:600px){
+	.grid { 
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: row
+	}
+	.post-page-image-gallery .gallery-image { 
+		width: calc(50%-2rem);
+	}
+}
+@media screen and (min-width: 1000px) {
+	.post-page-image-gallery .gallery-image {
+		width: calc(100% / 3 - 2rem);
+	}
+}  
